@@ -1,0 +1,32 @@
+
+<div>
+  <p class="ta-right p10 fs-20">
+    {{task.currentValue}}
+  </p>
+  <mat-grid-list cols="4" rowHeight="60px">
+    <mat-grid-tile><button class="fs-20" mat-fab (click)="getButtonClicked(7)">7</button></mat-grid-tile>
+    <mat-grid-tile><button class="fs-20" mat-fab (click)="getButtonClicked(8)">8</button></mat-grid-tile>
+    <mat-grid-tile><button class="fs-20" mat-fab (click)="getButtonClicked(9)">9</button></mat-grid-tile>
+    <mat-grid-tile><button class="fs-20" mat-fab [ngClass]="{
+      'warn': task.currentOperator == '+'
+    }" (click)="getButtonClicked('+')">+</button></mat-grid-tile>
+    <mat-grid-tile><button class="fs-20" mat-fab (click)="getButtonClicked(4)">4</button></mat-grid-tile>
+    <mat-grid-tile><button class="fs-20" mat-fab (click)="getButtonClicked(5)">5</button></mat-grid-tile>
+    <mat-grid-tile><button class="fs-20" mat-fab (click)="getButtonClicked(6)">6</button></mat-grid-tile>
+    <mat-grid-tile><button class="fs-20" mat-fab [ngClass]="{
+      'warn': task.currentOperator == '-'
+    }" (click)="getButtonClicked('-')">-</button></mat-grid-tile>
+    <mat-grid-tile><button class="fs-20" mat-fab (click)="getButtonClicked(1)">1</button></mat-grid-tile>
+    <mat-grid-tile><button class="fs-20" mat-fab (click)="getButtonClicked(2)">2</button></mat-grid-tile>
+    <mat-grid-tile><button class="fs-20" mat-fab (click)="getButtonClicked(3)">3</button></mat-grid-tile> 
+    <mat-grid-tile><button class="fs-20" mat-fab [ngClass]="{
+      'warn': task.currentOperator == 'x'
+    }" (click)="getButtonClicked('x')">x</button></mat-grid-tile>
+    <mat-grid-tile><button class="fs-20" mat-fab (click)="getButtonClicked('C')">C</button></mat-grid-tile>
+    <mat-grid-tile><button class="fs-20" mat-fab (click)="getButtonClicked(0)">0</button></mat-grid-tile>
+    <mat-grid-tile><button class="fs-20" mat-fab (click)="getButtonClicked('=')">=</button></mat-grid-tile>
+    <mat-grid-tile><button class="fs-20" mat-fab [ngClass]="{
+      'warn': task.currentOperator == '/'
+    }" (click)="getButtonClicked('/')">/</button></mat-grid-tile>  
+  </mat-grid-list>
+</div>

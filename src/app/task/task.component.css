@@ -1,0 +1,19 @@
+.mt-lg{
+    margin-top: 20px;
+}
+
+.ta-right{
+    text-align: right;
+}
+
+.fs-20{
+    font-size: 20px;
+}
+
+.p10{
+    padding: 10px;
+}
+
+.warn{
+    background-color: coral;
+}
